@@ -168,11 +168,19 @@
         <button class="menu-toggle" onclick="toggleMenu()">☰</button>
     </div>
 
+    <nav>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="index.html">Home</a>
+        <a href="AboutMe.html">About</a>
+        <a href="moodboard.html">Moodboard</a>
+        <a href="Gallery.html">Gallery</a>
+        <a href="ContactUs.html">Contact</a>
+    </nav>
+
     <div class="container">
         <div class="sidebar">
             <p>Sidebar Menu</p>
-            <a href="sample.html" onclick="setClickedLink(event)">Home</a>
-            <a href="#" onclick="setClickedLink(event)">Profile</a>
+            <a href="index.html" onclick="setClickedLink(event)">Home</a> <a href="#" onclick="setClickedLink(event)">Profile</a>
             <a href="#" onclick="setClickedLink(event)">Settings</a>
             <a href="#" onclick="setClickedLink(event)">Analytics</a>
             <a href="#" onclick="setClickedLink(event)">Support</a>
@@ -201,9 +209,8 @@
         links.forEach(link => {
             link.classList.remove('clicked');
         });
-        
+
         event.target.classList.add('clicked');
     }
     </script>
 </body>
-</html>
