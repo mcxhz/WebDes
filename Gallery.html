@@ -60,6 +60,30 @@
     .gallery-item iframe {
       aspect-ratio: 16 / 9;
     }
+      nav {
+      position: sticky;
+      top: 0;
+      background: var(--dark-gray);
+      color: var(--soft-white);
+      padding: 0.15rem;
+      margin-bottom: 10px;
+      text-align: center;
+      z-index: 100;
+    }
+
+    nav a {
+      color: var(--accent-blue);
+      margin: 0 20px;
+      text-decoration: none;
+      font-size: 18px;
+      padding: 10px;
+      border-radius: 8px;
+      transition: background 0.3s ease;
+    }
+
+    nav a:hover {
+      background: var(--muted-blue);
+    }
 
     footer {
       background: var(--muted-blue);
