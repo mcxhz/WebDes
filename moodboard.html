@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Moodboard</title>
+    <style>
+        :root {
+            --dark-bg: #121212;
+            --deep-gray: #1E1E1E;
+            --muted-blue: #3A506B;
+            --soft-white: #DADADA;
+            --accent-blue: #5DADE2;
+            --accent-soft: rgba(93, 173, 226, 0.3);
+            --pink-glow: rgba(255, 182, 193, 0.2);
+        }
+
+        body {
+            background-color: var(--dark-bg);
+            color: var(--soft-white);
+            font-family: "Comic Sans MS", cursive, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            text-align: center;
+            padding: 2rem;
+            background-color: var(--muted-blue);
+            box-shadow: 0 4px 10px var(--accent-soft);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            color: var(--soft-white);
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .gallery-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Center the image and text */
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 0 15px var(--pink-glow);
+            transition: transform 0.3s ease;
+            margin-bottom: 5px; /* Add some space between image and text */
+        }
+
+        .gallery-item img:hover {
+            transform: scale(1.05);
+        }
+
+        .gallery-item p {
+            margin-top: 0;
+            font-size: 0.9rem;
+            text-align: center;
+            color: var(--accent-blue);
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: var(--muted-blue);
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My Moodboard</h1>
+        <p>Soft aesthetics that inspire me</p>
+    </header>
+
+    <div class="gallery">
+        <div class="gallery-item">
+            <img src="https://64.media.tumblr.com/b5592eef6b70b63c13c7af3643f50d77/d84d62284ef4d132-0c/s1280x1920/5e35d39e6f2529fb7da01b15eed2769fdf3c6f7c.pnj" alt="Mood 1">
+            <p>"The silence in this room is a bell jar. Suffocating. You there?" - Sylvia Plath</p>
+        </div>
+        <div class="gallery-item">
+            <img src="https://64.media.tumblr.com/9e3dd7c1951d4dc8e7e0cfd43310d6bf/d84d62284ef4d132-69/s1280x1920/0dd17beeea0441a774cf936e7d7221ba60a17a88.pnj" alt="Mood 2">
+            <p>"Woke up feeling like a beetle again. The usual." - Franz Kafka</p>
+        </div>
+        <div class="gallery-item">
+            <img src="https://64.media.tumblr.com/b00a1fb2c21a2ce825452b30605d3b7f/d84d62284ef4d132-64/s1280x1920/05fe17b72b1788ee1df53e860584474ef92d21ba.pnj" alt="Mood 3">
+            <p>"Just stared into the abyss. It winked." - Friedrich Nietzsche</p>
+        </div>
+        <div class="gallery-item">
+            <img src="https://64.media.tumblr.com/e33b2065b8c06c0b5b6d35312555cb01/d84d62284ef4d132-66/s1280x1920/5c2002c40be4b0cea19c1c647d3cc6e95dbffc10.pnj" alt="Mood 4">
+            <p>"Haunted by the ghost of my past. Can't seem to outrun it." - Fyodor Dostoevsky</p>
+        </div>
+        <div class="gallery-item">
+            <img src="https://64.media.tumblr.com/fdac916108e7f6305e88eb38d2c30f9b/d84d62284ef4d132-a8/s1280x1920/8336a9bba779a2f9d8eef95978171bc511c56596.pnj" alt="Mood 5">
+            <p>"Feeling like a moth pinned to a board. Any flicker of light?" - Sylvia Plath</p>
+        </div>
+        <div class="gallery-item">
+            <img src="https://64.media.tumblr.com/e6d7abc404b888137d71bbc631d8994a/d84d62284ef4d132-7c/s1280x1920/b90f25c48d5e010535b4f43e43fc2692cb0691a1.pnj" alt="Mood 6">
+            <p>"The office called. More reports. Meaningless, as always." - Franz Kafka</p>
+        </div>
+        <div class="gallery-item">
+            <img src="https://64.media.tumblr.com/3e280c3ae9dcf6f1efab07453040dbbf/d84d62284ef4d132-4d/s1280x1920/8734687b9bac6987e7fbc74bebdd2a1bc0ce2f20.pnj" alt="Mood 7">
+            <p>"Beware those who preach comfort. They lull you into weakness." - Friedrich Nietzsche</p>
+        </div>
+        <div class="gallery-item">
+            <img src="https://64.media.tumblr.com/34e31a9c39a8e34b9e963b758f1caa37/4aba861b54bcd2c5-73/s1280x1920/e1f5df822d52be3cfdf2553a0fd232b3c84d86e4.pnj" alt="Mood 8">
+            <p>"The world shrinks to the size of my own despair today." - Sylvia Plath</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Mc Albert Caine M. Cañedo — Moodboard Inspiration</p>
+    </footer>
+</body>
+</html>

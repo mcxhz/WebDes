@@ -1,0 +1,209 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Futuristic Dashboard</title>
+    <style>
+        :root {
+            --dark-bg: #121212;
+            --deep-gray: #1E1E1E;
+            --muted-blue: #3A506B;
+            --soft-white: #DADADA;
+            --dark-gray: #252525;
+            --lighter-gray: #333;
+            --accent-blue: #5DADE2;
+            --accent-soft: rgba(93, 173, 226, 0.3);
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            background: var(--dark-bg);
+            color: var(--soft-white);
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: var(--muted-blue);
+            color: var(--soft-white);
+            padding: 20px 30px;
+            font-size: 24px;
+            font-weight: 600;
+        }
+
+        .menu-toggle {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            color: var(--soft-white);
+        }
+
+        .container {
+            display: flex;
+            flex: 1;
+        }
+
+        .sidebar {
+            width: 260px;
+            background-color: var(--dark-gray);
+            color: var(--soft-white);
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            font-size: 18px;
+            font-weight: 500;
+            box-shadow: 2px 0 10px var(--accent-soft);
+        }
+
+            .sidebar a {
+                color: var(--accent-blue);
+                text-decoration: none;
+                padding: 12px 18px;
+                display: block;
+                border-radius: 8px;
+                transition: background-color 0.3s ease, box-shadow 0.3s ease;
+            }
+
+            .sidebar a:hover {
+                background-color: var(--muted-blue);
+                box-shadow: 0 0 10px var(--accent-blue);
+            }
+
+            /* Styling for the clicked link */
+            .sidebar a.clicked {
+                background-color: var(--muted-blue);
+                color: var(--soft-white);
+                font-weight: bold;
+            }
+
+        .main-content {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            padding: 25px;
+            flex: 1;
+            background: var(--lighter-gray);
+            box-shadow: inset 0 0 10px var(--accent-soft);
+        }
+
+        .box {
+            background-color: var(--deep-gray);
+            border-radius: 12px;
+            box-shadow: 0 0 10px var(--accent-soft);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            font-weight: 600;
+            color: var(--soft-white);
+            padding: 60px 30px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+            .box:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 0 20px var(--accent-blue);
+                background-color: var(--muted-blue);
+            }
+
+        .box-large {
+            grid-column: span 2;
+            background-color: var(--dark-gray);
+        }
+
+        .box-small {
+            background-color: var(--muted-blue);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .main-content {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .sidebar {
+                width: 100%;
+                text-align: center;
+                display: none;
+            }
+
+                .sidebar.active {
+                    display: flex;
+                }
+
+            .main-content {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .main-content {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <span>Dashboard Header</span>
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    </div>
+
+    <div class="container">
+        <div class="sidebar">
+            <p>Sidebar Menu</p>
+            <a href="sample.html" onclick="setClickedLink(event)">Home</a>
+            <a href="#" onclick="setClickedLink(event)">Profile</a>
+            <a href="#" onclick="setClickedLink(event)">Settings</a>
+            <a href="#" onclick="setClickedLink(event)">Analytics</a>
+            <a href="#" onclick="setClickedLink(event)">Support</a>
+            <a href="#" onclick="setClickedLink(event)">Logout</a>
+        </div>
+
+        <div class="main-content">
+            <div class="box">Overview</div>
+            <div class="box">Engagement</div>
+            <div class="box">Impression</div>
+            <div class="box">Transaction</div>
+            <div class="box">Demographic</div>
+            <div class="box">Behavior</div>
+            <div class="box box-large">Report</div>
+            <div class="box box-small">Subscriber</div>
+        </div>
+    </div>
+
+    <script>
+    function toggleMenu() {
+      document.querySelector('.sidebar').classList.toggle('active');
+    }
+
+    function setClickedLink(event) {
+        let links = document.querySelectorAll('.sidebar a');
+        links.forEach(link => {
+            link.classList.remove('clicked');
+        });
+        
+        event.target.classList.add('clicked');
+    }
+    </script>
+</body>
+</html>

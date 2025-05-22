@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gallery</title>
+  <style>
+    :root {
+      --dark-bg: #121212;
+      --deep-gray: #1E1E1E;
+      --muted-blue: #3A506B;
+      --soft-white: #DADADA;
+      --accent-soft: rgba(93, 173, 226, 0.3);
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: var(--dark-bg);
+      color: var(--soft-white);
+    }
+
+    header {
+      background-color: var(--muted-blue);
+      padding: 1rem;
+      text-align: center;
+    }
+
+    main {
+      padding: 20px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #5DADE2;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 15px;
+    }
+
+    .gallery-item {
+      background: var(--deep-gray);
+      padding: 10px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px var(--accent-soft);
+    }
+
+    .gallery-item img,
+    .gallery-item iframe {
+      width: 100%;
+      height: auto;
+      border-radius: 6px;
+    }
+
+    .gallery-item iframe {
+      aspect-ratio: 16 / 9;
+    }
+
+    footer {
+      background: var(--muted-blue);
+      color: var(--soft-white);
+      text-align: center;
+      padding: 1rem;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>My Gallery</h1>
+    <p>Photos and videos that inspire me</p>
+  </header>
+
+  <main>
+    <h2>Gallery</h2>
+    <div class="gallery-grid">
+      <!-- External Images -->
+      <div class="gallery-item">
+        <img src="https://64.media.tumblr.com/226a21256075cd92724c6e095b26d08c/a5dc49590c949d85-4d/s1280x1920/e13efac1709ff61eb542da8e24b9abb7a9d87e55.pnj" alt="Image 1">
+      </div>
+      <div class="gallery-item">
+        <img src="https://64.media.tumblr.com/d80a3b6294a9ceaaded69d8d403d6bd8/a5dc49590c949d85-f9/s500x750/b7f3b851bd1f3428db68710f000dd72bbbcde6b8.pnj" alt="Image 2">
+      </div>
+      <div class="gallery-item">
+        <img src="https://64.media.tumblr.com/e03580a121a22c28b708ee8cd331ee92/a5dc49590c949d85-7d/s640x960/0933ee9bdd226b5f15063d7462a8c331130fdde7.pnj" alt="Image 3">
+      </div>
+      <div class="gallery-item">
+        <img src="https://64.media.tumblr.com/4109169a4ab511e16ca31dfd8366433e/a5dc49590c949d85-40/s400x600/e99e26df1db30a9b964ac060357ed9f96b44a3fb.pnj" alt="Image 4">
+      </div>
+
+      <!-- YouTube Videos with Autoplay, Mute, Loop -->
+      <div class="gallery-item">
+        <iframe src="https://www.youtube.com/embed/-d_iBRRVlVE?autoplay=1&mute=1&loop=1&playlist=-d_iBRRVlVE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>
+      <div class="gallery-item">
+        <iframe src="https://www.youtube.com/embed/aSk-D86aOtc?autoplay=1&mute=1&loop=1&playlist=aSk-D86aOtc" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>
+      <div class="gallery-item">
+        <iframe src="https://www.youtube.com/embed/w6uX9jamcwQ?autoplay=1&mute=1&loop=1&playlist=w6uX9jamcwQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>
+      <div class="gallery-item">
+        <iframe src="https://www.youtube.com/embed/unsmexy_5KU?autoplay=1&mute=1&loop=1&playlist=unsmexy_5KU" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 My Gallery. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
