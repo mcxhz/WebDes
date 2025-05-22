@@ -44,6 +44,30 @@
       box-shadow: 0 0 15px var(--accent-soft);
       border-radius: 10px;
     }
+      nav {
+      position: sticky;
+      top: 0;
+      background: var(--dark-gray);
+      color: var(--soft-white);
+      padding: 0.15rem;
+      margin-bottom: 10px;
+      text-align: center;
+      z-index: 100;
+    }
+
+    nav a {
+      color: var(--accent-blue);
+      margin: 0 20px;
+      text-decoration: none;
+      font-size: 18px;
+      padding: 10px;
+      border-radius: 8px;
+      transition: background 0.3s ease;
+    }
+
+    nav a:hover {
+      background: var(--muted-blue);
+    }
 
     .intro {
       margin-bottom: 2rem;
@@ -83,6 +107,15 @@
   <header>
     <h1>About Me</h1>
   </header>
+
+  <nav>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="index.html">Home</a>
+    <a href="AboutMe.html">About</a>
+    <a href="moodboard.html">Moodboard</a>
+    <a href="Gallery.html">Gallery</a>
+    <a href="ContactUs.html">Contact</a>
+  </nav>
 
   <div class="container">
     <div class="intro">
