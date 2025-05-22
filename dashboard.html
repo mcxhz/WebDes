@@ -61,6 +61,20 @@
       z-index: 100;
     }
 
+    nav a {
+      color: var(--accent-blue);
+      margin: 0 20px;
+      text-decoration: none;
+      font-size: 18px;
+      padding: 10px;
+      border-radius: 8px;
+      transition: background 0.3s ease;
+    }
+
+    nav a:hover {
+      background: var(--muted-blue);
+    }
+
         .sidebar {
             width: 260px;
             background-color: var(--dark-gray);
@@ -177,6 +191,15 @@
         <span>Dashboard Header</span>
         <button class="menu-toggle" onclick="toggleMenu()">☰</button>
     </div>
+
+    <nav>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="index.html">Home</a>
+        <a href="AboutMe.html">About</a>
+        <a href="moodboard.html">Moodboard</a>
+        <a href="Gallery.html">Gallery</a>
+        <a href="ContactUs.html">Contact</a>
+    </nav>
 
     <div class="container">
         <div class="sidebar">
